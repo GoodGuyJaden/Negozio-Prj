@@ -24,10 +24,10 @@ public class ListaSpesa
 	
 	public void stampa()
 	{
-			for (int i = 0;i<lista.size();i++)
-			{
-				System.out.println(i+") " + lista.get(i));
-			}
+		for (int i = 0;i<lista.size();i++)
+		{
+			System.out.println(i+") " + lista.get(i));
+		}
 	}
 	
 	public String conto()

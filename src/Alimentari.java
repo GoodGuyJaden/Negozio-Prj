@@ -17,15 +17,6 @@ public class Alimentari extends Prodotti
 		return dataScadenza;
 	}
 	
-	public static void main(String[]args)
-	{
-		Alimentari a = new Alimentari("ciao", (float)7.50, LocalDate.of(2018, 11, 27));
-		System.out.println(a);
-		a.applicaSconto();
-		System.out.println(a.getPrezzo());
-	}
-	
-
 	@Override
 	public void applicaSconto() 
 	{

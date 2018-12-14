@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class NonAlimentari extends Prodotti
 {
 	private String materiale;
-	public static ArrayList<String> materiali_riciclabili = new ArrayList<String>(Arrays.asList("Vetro","Plastica","Carta"));
+	private static ArrayList<String> materiali_riciclabili = new ArrayList<String>(Arrays.asList("Vetro","Plastica","Carta"));
 	
 	
 	public static ArrayList<String> getMat_ric()
@@ -19,17 +19,7 @@ public class NonAlimentari extends Prodotti
 		super.setPrezzo(prezzo);
 		this.materiale = materiale.toUpperCase().charAt(0) + materiale.toLowerCase().substring(1);
 	}
-	
-	
-
-	public static void main(String[]args)
-	{
-		NonAlimentari nA = new NonAlimentari("ciao", (float)8.00, "vetro");
-		System.out.println(nA);
-		nA.applicaSconto();
-		System.out.println(nA.getPrezzo());
-	}
-	
+		
 	@Override
 	public void applicaSconto() 
 	{

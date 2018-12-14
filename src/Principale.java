@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Principale 
 {
-	static Scanner sc = new Scanner(System.in);
+	private static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args)
 	{
@@ -16,7 +16,7 @@ public class Principale
 		System.out.println("Se vuoi inserire uno di questi prodotti digita il numero corrispondente altrimenti premi 'INVIO'");
 		String stringa = "";
 		int scelta_lista = -1;
-		while(!(scelta_lista >= 0 && scelta_lista < Supermercato.getSizeLista_Prodotti()))
+		while(!(scelta_lista >= 0 && scelta_lista < Supermercato.getLista_prodotti().size()))
 		{
 			System.out.println("Inserisci SOLO i numeri disponibili\n");
 			stringa = sc.nextLine().replaceAll("\\D+", "");
@@ -40,7 +40,7 @@ public class Principale
 		System.out.println("Seleziona il prodotto o premi 'INVIO' se si ha cambiato idea");
 		String stringa = "";
 		int scelta_lista = -1;
-		while(!(scelta_lista >= 0 && scelta_lista < Supermercato.getSizeLista_Prodotti()))
+		while(!(scelta_lista >= 0 && scelta_lista < Supermercato.getLista_prodotti().size()))
 		{
 			stringa = sc.nextLine().replaceAll("\\D+", "");
 			
@@ -100,7 +100,7 @@ public class Principale
 									}
 									else
 									{
-										Supermercato.getProdotto(scelta_lista).checkSconto();;
+										Supermercato.getLista_prodotti().get(scelta_lista).checkSconto();
 									}
 									break;
 							

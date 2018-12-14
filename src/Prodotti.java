@@ -7,7 +7,7 @@ public abstract class Prodotti
 	private float prezzo;
 	private static ArrayList <String> ids = new ArrayList <String>();
 		
-	public String generaIds()
+	private String generaIds()
 	{
 		String id = "";
 		for (int i = 0; i < 8; i++) {
@@ -22,17 +22,17 @@ public abstract class Prodotti
 		return id;
 	}
 	
+	
+	public static ArrayList<String> getIds() 
+	{
+		return ids;
+	}
+
 	public String getId() 
 	{
 		return id;
 	}
 	
-	
-
-	public static ArrayList<String> getIds() {
-		return ids;
-	}
-
 	public void setId() 
 	{
 		this.id = generaIds();
