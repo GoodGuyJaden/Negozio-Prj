@@ -26,6 +26,12 @@ public abstract class Prodotti
 	{
 		return id;
 	}
+	
+	
+
+	public static ArrayList<String> getIds() {
+		return ids;
+	}
 
 	public void setId() 
 	{
@@ -53,9 +59,11 @@ public abstract class Prodotti
 	}
 
 	public abstract void applicaSconto();
+	
+	public abstract void checkSconto();
 
 	@Override
 	public String toString() {
-		return "Prodotti [id=" + id + ", descrizione=" + descrizione + ", prezzo=" + prezzo + "]";
+		return "Codice a barre: " + id +"\nDescrizione del prodotto: " + descrizione + "\nPrezzo unitario: " + String.format("%.2f", prezzo) + "€\n";
 	}
 }

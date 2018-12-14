@@ -20,10 +20,7 @@ public class NonAlimentari extends Prodotti
 		this.materiale = materiale.toUpperCase().charAt(0) + materiale.toLowerCase().substring(1);
 	}
 	
-	@Override
-	public String toString() {
-		return super.toString() + "NonAlimentari [materiale=" + materiale + "]";
-	}
+	
 
 	public static void main(String[]args)
 	{
@@ -38,12 +35,31 @@ public class NonAlimentari extends Prodotti
 	{
 		if(materiali_riciclabili.contains(materiale))
 		{
+			System.out.println("Sconto applicato sul prodotto : " + super.getDescrizione() + " di -->" + String.format("%.2f", super.getPrezzo()/100*10));
 			super.setPrezzo(super.getPrezzo()-super.getPrezzo()/100*10);
 		}
 		else
 		{
-			System.out.println("Sconto non applicabile.");
+			//System.out.println("Sconto non applicabile.");
 		}
+	}
+	
+	@Override
+	public void checkSconto() 
+	{
+		if(materiali_riciclabili.contains(materiale))
+		{
+			System.out.println("Sconto applicabile di -->" + String.format("%.2f", super.getPrezzo()/100*20) +"€\nPrezzo da pagare finale: " + String.format("%.2f", (super.getPrezzo()-super.getPrezzo()/100*10)) + "€\n");
+		}
+		else
+		{
+			System.out.println("Non si applica lo sconto.\n");
+		}
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + "Tipo prodotto: NON ALIMENTARI\nMateriale del prodotto: " + materiale + "\n";
 	}
 
 }
