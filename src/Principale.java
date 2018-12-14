@@ -84,66 +84,66 @@ public class Principale
 									selectChoice(miaLista);
 									break;
 							
-				case "2":	Supermercato.stampaSoloAlim();
-							selectChoice(miaLista);
-							break;
+				case "2":			Supermercato.stampaSoloAlim();
+									selectChoice(miaLista);
+									break;
 							
-				case "3":	Supermercato.stampaSoloNonAlim();
-							selectChoice(miaLista);
-							break;
+				case "3":			Supermercato.stampaSoloNonAlim();
+									selectChoice(miaLista);
+									break;
 							
-				case "4":	Supermercato.stampaLista_Prodotti();
-							scelta_lista = selectChoice();
-							if(scelta_lista == -1)
-							{
-								
-							}
-							else
-							{
-								Supermercato.getProdotto(scelta_lista).checkSconto();;
-							}
-							break;
+				case "4":			Supermercato.stampaLista_Prodotti();
+									scelta_lista = selectChoice();
+									if(scelta_lista == -1)
+									{
+										
+									}
+									else
+									{
+										Supermercato.getProdotto(scelta_lista).checkSconto();;
+									}
+									break;
 							
-				case "6":	if(miaLista.getSizeLista() == 0)
-							{
-								System.out.println("Non hai prodotti nel carrello. ");
-							}
-							else
-							{
-								miaLista.stampa();
-								scelta_lista = selectChoice();
-								if(scelta_lista == -1)
-								{
+				case "6":			if(miaLista.getSizeLista() == 0)
+									{
+										System.out.println("Non hai prodotti nel carrello. ");
+									}
+									else
+									{
+										miaLista.stampa();
+										scelta_lista = selectChoice();
+										if(scelta_lista == -1)
+										{
+											
+										}
+										else
+										{
+											miaLista.removeProd(scelta_lista);
+										}
+									}
 									
-								}
-								else
-								{
-									miaLista.removeProd(scelta_lista);
-								}
-							}
+									break;
+				
+				case "7":			miaLista.stampa();
+									break;
+				
+				case "8":			if(miaLista.getSizeLista() == 0)
+									{
+										System.out.println("Non hai prodotti nel carrello. ");
+									}
+									else
+									{
+										System.out.println(miaLista.conto());
+										System.out.println("Transazione eseguita. La spesa le verrà consegnata in " + (int)(Math.random()*9999999) + " secondi. Grazie per aver effettuato acquisti con noi."); 
+										scelta_switch = "9";
+									}
+									break;
 							
-							break;
+				case "9":			System.out.println("Annullamento ordine in corso...\nAnnullato. Arrivederci.");
+									break;
 				
-				case "7":	miaLista.stampa();
-							break;
-				
-				case "8":	if(miaLista.getSizeLista() == 0)
-							{
-								System.out.println("Non hai prodotti nel carrello. ");
-							}
-							else
-							{
-								System.out.println(miaLista.conto());
-								System.out.println("Transazione eseguita. La spesa le verrà consegnata in " + (int)(Math.random()*9999999) + " secondi. Grazie per aver effettuato acquisti con noi."); 
-								scelta_switch = "9";
-							}
-							break;
-							
-				case "9":	System.out.println("Annullamento ordine in corso...\nAnnullato. Arrivederci.");
-							break;
-				
-				default:	System.out.println("Si prega di inserire soltanto le opzioni valide");
-							break;
+				default:			System.out.println("Si prega di inserire soltanto le opzioni valide");
+									break;
 			}
 		}
 		
