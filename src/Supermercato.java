@@ -34,6 +34,13 @@ public class Supermercato
 		}
 	}
 
+	/*     se si vuole creare un oggetto di Supermercato e si rimuove static da "riempiScaffali()"
+	public Supermercato()
+	{
+		riempiScaffali();
+	}
+	*/
+	
 	public static void costruisci()
 	{
 		riempiScaffali();
