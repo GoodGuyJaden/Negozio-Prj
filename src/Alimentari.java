@@ -34,7 +34,7 @@ public class Alimentari extends Prodotti
 		}
 		else
 		{
-			System.out.println("Non si applica lo sconto."); // ricordarsi questo
+			//System.out.println("Non si applica lo sconto."); 
 		}
 	}
 	
