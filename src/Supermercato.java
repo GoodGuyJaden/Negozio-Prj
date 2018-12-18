@@ -25,11 +25,11 @@ public class Supermercato
 			if((int)(Math.random()*2) == 0)
 			{
 				//NonAlimentari n = new Alimentari("",(float)Math.random()*10,LocalDate.of()));
-				lista_prodotti.add(new Alimentari("Oggetto_" + i /*+ "   SI sconto."*/,(float)(Math.random()*10),LocalDate.of(2018,(int)(Math.random()*12+1),(int)(Math.random()*30+1))));
+				lista_prodotti.add(new Alimentari("Oggetto_" + i /*+ "   NO sconto."*/,(float)(Math.random()*10),LocalDate.of(2019,(int)(Math.random()*12+1),(int)(Math.random()*30+1))));
 			}
 			else
 			{
-				lista_prodotti.add(new Alimentari("Oggetto_" + i /*+ "   NO sconto."*/,(float)(Math.random()*10),LocalDate.of(2018,LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth())));
+				lista_prodotti.add(new Alimentari("Oggetto_" + i /*+ "   SI sconto."*/,(float)(Math.random()*10),LocalDate.of(2018,LocalDate.now().getMonth(),LocalDate.now().plusDays((int)(Math.random()*10)).getDayOfMonth())));
 			}
 		}
 	}

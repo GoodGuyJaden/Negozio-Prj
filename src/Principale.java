@@ -134,15 +134,15 @@ public class Principale
 									else
 									{
 										System.out.println(miaLista.conto());
-										System.out.println("Transazione eseguita. La spesa le verrà consegnata in " + (int)(Math.random()*9999999) + " secondi. Grazie per aver effettuato acquisti con noi."); 
+										System.out.println("\nTransazione eseguita. La spesa le verrà consegnata in " + (int)(Math.random()*9999999) + " secondi. Grazie per aver effettuato acquisti con noi."); 
 										scelta_switch = "9";
 									}
 									break;
 							
-				case "9":			System.out.println("Annullamento ordine in corso...\nAnnullato. Arrivederci.");
+				case "9":			System.out.println("\nAnnullamento ordine in corso...\nAnnullato. Arrivederci.");
 									break;
 				
-				default:			System.out.println("Si prega di inserire soltanto le opzioni valide");
+				default:			System.out.println("\nSi prega di inserire soltanto le opzioni valide\n");
 									break;
 			}
 		}
